@@ -1,0 +1,72 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+:root {
+  --primary:        #e2c97e;
+  --primary-dim:    rgba(226, 201, 126, 0.1);
+  --primary-border: rgba(226, 201, 126, 0.15);
+  --bg:             #1f1c13;
+  --bg-card:        #252118;
+  --bg-input:       rgba(31, 28, 19, 0.5);
+  --text:           #f1ead6;
+  --text-muted:     #6b6455;
+  --text-sub:       #9b8f7a;
+  --danger:         #ef4444;
+  --success:        #22c55e;
+  --sidebar-w:      280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass {
+  background: rgba(226, 201, 126, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--primary-border);
+}
+
+input, select, textarea {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg-input);
+  border: 1px solid var(--primary-border);
+  border-radius: 12px;
+  color: var(--text);
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(226, 201, 126, 0.1);
+}
+input::placeholder, textarea::placeholder { color: var(--text-muted); }
+select option { background: var(--bg); }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(226,201,126,0.2); }
+  50%       { box-shadow: 0 0 24px rgba(226,201,126,0.4); }
+}
+
+.animate-in { animation: fadeIn 0.3s ease forwards; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary-border); border-radius: 4px; }
