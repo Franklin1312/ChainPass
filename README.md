@@ -1,4 +1,4 @@
-# 🎟 DeTickets — NFT Event Ticketing Platform
+# 🎟 ChainPass — NFT Event Ticketing Platform
 
 > A full-stack Web3 ticketing platform where event tickets are minted as ERC-721 NFTs on Ethereum Sepolia testnet. Secure, transparent, and scalable — powered by smart contracts, a Node.js backend, and a React frontend with MetaMask integration.
 
